@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineResource
+metadata:
+  name: my-source-repo
+spec:
+  type: git
+  params:
+    - name: revision
+      value: main
+    - name: url
+      value: https://github.com/your-username/my-node-app.git

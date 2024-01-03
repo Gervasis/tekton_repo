@@ -1,0 +1,12 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  name: build-taskrun
+spec:
+  taskRef:
+    name: build-task
+  inputs:
+    resources:
+      - name: source
+        resourceRef:
+          name: my-source-repo
